@@ -1,0 +1,46 @@
+
+
+        /* 模态框初始状态 */
+        .modalbox {
+            font-family: Arial, Helvetica, sans-serif;
+            /* 通过 position 让遮罩层撑满整个屏幕 */
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            /* 遮罩层背景色为黑色 */
+            background: #000;
+            /* 给 z-index 一个过大的值，确保遮罩层”真的遮盖住了“模态框背后的元素 */
+            z-index: 99999;
+            /* 设置 opacity 为 0，用于隐藏模态框 */
+            opacity: 0;
+            /* 一些过渡效果 */
+            -webkit-transition: opacity 400ms ease-in;
+            -moz-transition: opacity 400ms ease-in;
+            transition: opacity 400ms ease-in;
+            /* pointer-events 鼠标事件“穿透”该元素并且指定该元素“下面”的任何东西 */
+            /* 请参阅：https://developer.mozilla.org/zh-CN/docs/Web/CSS/pointer-events */
+            pointer-events: none;
+        }
+
+        /* 模态框显示状态 */
+        .modalbox:target {
+            /* 不透明为 0.8 */
+            opacity: 0.8;
+            /* 与 pointer-events 属性未指定时的表现效果相同 */
+            /* 请参阅：https://developer.mozilla.org/zh-CN/docs/Web/CSS/pointer-events */
+            pointer-events: auto;
+        }
+
+        /* 模态框内容，你也可以自定义 */
+        .modalbox-dialog {
+            width: 400px;
+            position: relative;
+            margin: 10% auto;
+            padding: 5px 20px 13px 20px;
+            border-radius: 10px;
+            background: #fff;
+        }
+
+
