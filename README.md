@@ -11,4 +11,4 @@
 ## 示例效果
 
 
-![效果示例](https://ws4.sinaimg.cn/large/006OyqbNly1fnrv5zxi0fg30j50f4jsk.gif)
+![效果示例](exp_detail.gif)
